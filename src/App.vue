@@ -1,5 +1,8 @@
 <template>
-  <headr></headr>
+  <div>
+    <headr></headr>
+    <foottr></foottr>
+  </div>
 </template>
 
 <script>
