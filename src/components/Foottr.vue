@@ -16,7 +16,7 @@ export default {
 </script>
 <style scoped>
 footer {
-  background: #222;
+  background: #232f3e;
   height: 40px;
   margin-top: 10px;
 }

@@ -7,7 +7,7 @@
       <h1>
         Blog
         <span>
-          <sub class="text-muted">write some awesome blog here!</sub>
+          <sub class="text-muted">write an awesome blog here!</sub>
         </span>
       </h1>
     </a>

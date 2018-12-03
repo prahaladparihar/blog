@@ -1,6 +1,7 @@
 <template>
   <div>
     <headr></headr>
+    <boody></boody>
     <foottr></foottr>
   </div>
 </template>
