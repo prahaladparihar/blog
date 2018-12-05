@@ -59,7 +59,7 @@
       <p class="text-justify pl-4">{{blog.content}}</p>
       <p class="text-primary">Category:</p>
       <ul>
-        <p v-for="category in blog.categories" class="text-inline">
+        <p v-for="category in blog.categories">
           <i class="fa fa-hand-o-right" aria-hidden="true"></i>
           {{category}}
         </p>
@@ -89,5 +89,42 @@ h3 {
 }
 i {
   color: #7fff00;
+}
+.bdy {
+  font-family: Arial;
+  color: white;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+.right {
+  right: 0;
+  background-color: red;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
 }
 </style>
