@@ -1,7 +1,8 @@
 <template>
   <div>
     <headr></headr>
-    <boody></boody>
+    <!-- <boody></boody> -->
+    <showblog></showblog>
     <foottr></foottr>
   </div>
 </template>
