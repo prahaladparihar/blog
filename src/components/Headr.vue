@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  data() {}
+  name: "Headr"
 };
 </script>
 

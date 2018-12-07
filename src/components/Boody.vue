@@ -45,6 +45,11 @@
             <input type="checkbox" value="Educational" v-model="blog.categories"> Educational
           </label>
         </div>
+        <button
+          type="submit"
+          v-on:click.prevent="post"
+          class="btn btn-outline-success pull-right"
+        >Add Blog</button>
       </form>
     </div>
     <hr class="my-5">
@@ -79,6 +84,19 @@ export default {
         categories: []
       }
     };
+  },
+  methods: {
+    post: function() {
+      this.axios
+        .post("https://jsonplaceholder.typicode.com/posts", {
+          title: this.blog.title,
+          body: this.blog.content,
+          userId: 1
+        })
+        .then(function(data) {
+          console.log(data);
+        });
+    }
   }
 };
 </script>
