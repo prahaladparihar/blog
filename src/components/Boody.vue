@@ -2,7 +2,7 @@
   <div>
     <div class="container my-3 col-lg-8">
       <h3 class="text-info">ADD A NEW BLOG</h3>
-      <form>
+      <form v-if="!status">
         <label>Author Name:</label>
         <input
           type="text"
@@ -50,6 +50,10 @@
           v-on:click.prevent="post"
           class="btn btn-outline-success pull-right"
         >Add Blog</button>
+        <!-- for success or error msg -->
+        <div v-if="status">
+          <span class="display-4 text-success mssg">Thanks for adding your post!</span>
+        </div>
       </form>
     </div>
     <hr class="my-5">
@@ -65,7 +69,7 @@
       <p class="text-primary">Category:</p>
       <ul>
         <p v-for="category in blog.categories">
-          <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+          <i class="fa fa-hand-o-right categ" aria-hidden="true"></i>
           {{category}}
         </p>
       </ul>
@@ -82,7 +86,8 @@ export default {
         title: "",
         content: "",
         categories: []
-      }
+      },
+      status: false
     };
   },
   methods: {
@@ -96,20 +101,21 @@ export default {
         .then(function(data) {
           console.log(data);
         });
+      this.status = true;
     }
   }
 };
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
 h3 {
   text-align: center;
 }
-i {
+.categ {
   color: #7fff00;
 }
-.bdy {
-  font-family: Arial;
-  color: white;
+.mssg {
+  font-family: "Indie Flower", cursive;
 }
 </style>

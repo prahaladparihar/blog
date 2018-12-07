@@ -4,7 +4,7 @@
       <img src="../assets/blog.png" alt="blog" class="container">
     </a>
     <a href="#">
-      <h1>
+      <h1 style="font-family: 'Lobster', cursive;">
         Blog
         <span>
           <sub class="text-muted">write an awesome blog here!</sub>
@@ -21,6 +21,7 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css?family=Lobster");
 nav {
   background: #fff;
   box-shadow: -1px -13px 7px 12px;
