@@ -3,7 +3,7 @@ import App from './App.vue'
 import axios from 'axios'
 
 
-Vue.use(axios)
+Vue.prototype.axios = axios;
 
 import Headr from './components/Headr.vue'
 import Boody from './components/Boody.vue'
